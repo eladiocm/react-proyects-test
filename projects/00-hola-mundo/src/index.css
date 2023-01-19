@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  background: #222;
+  font-family: system-ui;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.tw-followCard {
+  display: flex;
+  gap: 10px;
+  font-size: .8rem;
+}
+
+.tw-followCard-header {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.tw-followCard-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 1000px;
+
+}
+
+.tw-followCard-info {
+  display: flex;
+  flex-direction: column;
+}
+
+article header div strong {
+  color: #fff;
+}
+
+.tw-followCard-infoUserName {
+  color: #c2c2c2;
+}
+
+article aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tw-followCard-button {
+  border: 0;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-weight: bold;
+  font-family: system-ui;
+  margin-left: 16px;
+}
