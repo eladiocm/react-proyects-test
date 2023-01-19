@@ -1,5 +1,12 @@
+import { useState } from "react"
 
 function App() {
+
+  const [isFollowing, setIsFollowing] = useState(false)
+
+  const text = isFollowing ? 'Siguiendo' : 'Seguir'
+  const buttonClassName = isFollowing ? 'tw-followCard-button is-following' : 'tw-followCard-button'
+
   return (
     <article className="tw-followCard">
       <header className="tw-followCard-header">
@@ -13,7 +20,10 @@ function App() {
         </div>
       </header>
       <aside>
-        <button className="tw-followCard-button">Seguir</button>
+        <button className={buttonClassName} onClick={() => setIsFollowing(!isFollowing)}>
+          <span className="tw-followCard-text">{text}</span>
+          <span className="tw-followCard-unFollow">Dejar de seguir</span>
+        </button>
       </aside>
     </article>
   )
