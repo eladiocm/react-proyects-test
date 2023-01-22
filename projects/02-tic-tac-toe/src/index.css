@@ -59,6 +59,11 @@ body {
   color: #222;
 }
 
+.board p {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
 .board .game {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -72,6 +77,7 @@ body {
   width: fit-content;
   position: relative;
   border-radius: 10px;
+  gap: 10px;
 }
 
 .turn .square,
