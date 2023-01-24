@@ -1,15 +1,14 @@
-import { useState } from "react"
-import confetti from "canvas-confetti"
+import { useState } from 'react'
+import confetti from 'canvas-confetti'
 
-import { Square } from "./components/Square"
-import { TURNS } from "./constants"
-import { checkWinnerForm, checkEndGame } from "./logic/board"
-import { saveGameToStorage, resetGameStorage } from "./logic/storage"
+import { Square } from './components/Square'
+import { TURNS } from './constants'
+import { checkWinnerForm, checkEndGame } from './logic/board'
+import { saveGameToStorage, resetGameStorage } from './logic/storage'
 
-import { WinnerModal } from "./components/WinnerModal"
+import { WinnerModal } from './components/WinnerModal'
 
-function App() {
-
+function App () {
   const [board, setBoard] = useState(() => {
     const boardFromStorage = window.localStorage.getItem('board')
     if (boardFromStorage) return JSON.parse(boardFromStorage)
@@ -59,10 +58,10 @@ function App() {
   }
 
   return (
-    <main className="board">
+    <main className='board'>
       <h1>Tic Tac Toe</h1>
       <button onClick={resetGame}>Reset del juego</button>
-      <section className="game">
+      <section className='game'>
         {
           board.map((square, index) => {
             return (
@@ -78,7 +77,7 @@ function App() {
         }
       </section>
       <p>Es el turno de :</p>
-      <section className="turn">
+      <section className='turn'>
         <Square isSelected={turn === TURNS.X}>
           {TURNS.X}
         </Square>
