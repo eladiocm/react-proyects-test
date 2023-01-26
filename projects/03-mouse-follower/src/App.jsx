@@ -40,7 +40,7 @@ function App () {
       }}
       />
       <button onClick={() => setEnable(!enable)}>
-        {enable ? 'Desacticar' : 'Activar'} seguir puntero
+        {enable ? 'Desactivar' : 'Activar'} seguir puntero
       </button>
     </>
   )
