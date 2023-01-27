@@ -17,7 +17,7 @@ export const App = () => {
       <button onClick={handleClick}>Fetching</button>
       <article>
         {console.log(image)}
-        {image === false ? <img src={`${image}`} alt='image of de cat very nice to say :)' /> : <img src='../javascript.svg' alt='Por si no había imagen' />}
+        {image ? <img src={`${image}`} alt='image of de cat very nice to say :)' /> : <img src='../javascript.svg' alt='Por si no había imagen' />}
         {fact ? <p>{fact}</p> : <p>Cargando...</p>}
       </article>
 
