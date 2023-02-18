@@ -15,9 +15,9 @@
 }
 
 #root {
-  max-width: 600px;
+  max-width: 90%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem 2rem;
   text-align: center;
   width: 100%;
 }
@@ -52,4 +52,8 @@ button:focus-visible {
 ul {
   list-style: none;
   padding: 0;
+}
+
+main {
+  width: 100%;
 }
