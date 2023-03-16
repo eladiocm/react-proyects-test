@@ -7,7 +7,7 @@ function App () {
   const [products] = useState(initialProducts)
   const [filters, setFilters] = useState({
     category: 'all',
-    minPrice: 50
+    minPrice: 0
   })
 
   const filterProducts = (products) => {
@@ -26,7 +26,7 @@ function App () {
 
   return (
     <>
-      <Header />
+      <Header setFilters={setFilters} />
       <Products products={filteredProducts} />
     </>
   )
