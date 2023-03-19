@@ -5,9 +5,9 @@
   .products ul {
     display: grid;
     grid-template-columns: repeat(
-      auto-fit,
+      auto-fill,
       minmax(
-        250px,
+        300px,
         1fr
       )
     );

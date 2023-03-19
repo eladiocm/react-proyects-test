@@ -1,9 +1,12 @@
 import { useId } from 'react'
 import { CartIcon, ClearCartIcon } from './Icons.jsx'
 import './Cart.css'
+import { useCart } from '../hooks/useCart.js'
+import { CartItem } from './CartItem.jsx'
 
 export function Cart () {
   const cartCheckboxId = useId()
+  const { cart, clearCart, addToCart } = useCart()
 
   return (
     <>
@@ -14,20 +17,16 @@ export function Cart () {
 
       <aside className='cart'>
         <ul>
-          <li>
-            <img src='https://i.dummyjson.com/data/products/2/thumbnail.jpg' alt='Iphone' />
-            <div>
-              <strong>iPhone</strong> - $1499
-            </div>
-
-            <footer>
-              <small>Qty: 1</small>
-              <button>+</button>
-            </footer>
-          </li>
+          {cart.map(product => (
+            <CartItem
+              key={product.id}
+              addToCart={() => addToCart(product)}
+              {...product}
+            />
+          ))}
         </ul>
 
-        <button>
+        <button onClick={clearCart}>
           <ClearCartIcon />
         </button>
       </aside>
