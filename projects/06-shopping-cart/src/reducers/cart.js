@@ -14,7 +14,7 @@ export const cartReducer = (state, action) => {
       const productInCartIndex = state.findIndex(item => item.id === id)
 
       if (productInCartIndex >= 0) {
-        // ! Formas de ADD un producto ya en el carrito
+        // ! Formas de ADD la cant de un producto ya en el carrito
         // * 1 una forma sería usando structuredClone
         /* const newState = structuredClone(state)
         newState[productInCartIndex].quantity += 1 */
